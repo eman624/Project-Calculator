@@ -6,9 +6,8 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .calculator-container {
@@ -22,12 +21,16 @@ body {
 }
 
 .item {
-	outline: 2px solid black;
+  outline: 2px solid black;
+  display: grid;
+  place-items: center;
 }
 
 .display {
   background: #b2b9b7;
   grid-column: span 4;
+  justify-content: flex-end;
+  padding-left: 20px;
 }
 
 .number {
@@ -43,5 +46,5 @@ body {
 }
 
 .zero {
-	grid-column: span 2;
+  grid-column: span 2;
 }
