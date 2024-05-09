@@ -17,26 +17,31 @@ body {
   height: 520px;
   border-radius: 1%;
   background: black;
+  grid-template-columns: repeat(4, 1fr);
+  border: 10px solid black;
+}
+
+.item {
+	outline: 2px solid black;
 }
 
 .display {
-  background: gray;
-  outline: black solid 2px;
+  background: #b2b9b7;
+  grid-column: span 4;
 }
 
 .number {
-  background: blue;
+  background: #207c7e;
   gap: 10px 10px;
-  outline: black solid 2px;
 }
 
+.special-operator {
+  background: #1d90ff;
+}
 .operator {
-  background: orange;
-  gap: 10px 10px;
-  outline: black solid 2px;
+  background: #ff901f;
 }
 
-.special {
-  background: pink;
-  outline: black solid 2px;
+.zero {
+	grid-column: span 2;
 }
