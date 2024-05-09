@@ -6,4 +6,37 @@
 
 body {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-container {
+  display: grid;
+  width: 420px;
+  height: 520px;
+  border-radius: 1%;
+  background: black;
+}
+
+.display {
+  background: gray;
+  outline: black solid 2px;
+}
+
+.number {
+  background: blue;
+  gap: 10px 10px;
+  outline: black solid 2px;
+}
+
+.operator {
+  background: orange;
+  gap: 10px 10px;
+  outline: black solid 2px;
+}
+
+.special {
+  background: pink;
+  outline: black solid 2px;
 }

@@ -30,3 +30,9 @@ function operator(operator, x, y) {
       break;
   }
 }
+
+const equal = document.querySelector("equal");
+equal.addEventListener("click", operator("add", 1, 3));
+
+const display = document.querySelector("display");
+display.textContent = result;
