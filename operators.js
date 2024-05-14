@@ -1,3 +1,9 @@
+const display = document.querySelector(".display");
+const numbers = document.querySelectorAll(".number");
+const operators = document.querySelectorAll(".operator");
+const clear = document.querySelector(".clear");
+// const add = document.querySelector(".add");
+
 function add(x, y) {
   return x + y;
 }
@@ -31,8 +37,19 @@ function operator(operator, x, y) {
   }
 }
 
-const equal = document.querySelector("equal");
-equal.addEventListener("click", operator("add", 1, 3));
+let firstNumber = 0;
+let secondNumber = 0;
+let displayValue = "";
+let result = "";
 
-const display = document.querySelector("display");
-display.textContent = result;
+numbers.forEach((number) => {
+  number.addEventListener("click", () => {
+    display.textContent = displayValue + number.textContent;
+    displayValue = display.textContent;
+  });
+});
+
+clear.addEventListener("click", () => {
+  display.textContent = "0";
+  displayValue = "";
+});
