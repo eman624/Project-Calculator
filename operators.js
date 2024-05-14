@@ -49,10 +49,7 @@ numbers.forEach((number) => {
       decimalCount++;
     }
 
-    if (decimalCount <= 1) {
-      display.textContent = displayValue + number.textContent;
-      displayValue = display.textContent;
-    } else if (number.textContent != ".") {
+    if (decimalCount <= 1 || number.textContent != ".") {
       display.textContent = displayValue + number.textContent;
       displayValue = display.textContent;
     }
