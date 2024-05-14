@@ -41,11 +41,21 @@ let firstNumber = 0;
 let secondNumber = 0;
 let displayValue = "";
 let result = "";
+let decimalCount = 0;
 
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
-    display.textContent = displayValue + number.textContent;
-    displayValue = display.textContent;
+    if (number.textContent === ".") {
+      decimalCount++;
+    }
+
+    if (decimalCount <= 1) {
+      display.textContent = displayValue + number.textContent;
+      displayValue = display.textContent;
+    } else if (number.textContent != ".") {
+      display.textContent = displayValue + number.textContent;
+      displayValue = display.textContent;
+    }
   });
 });
 
