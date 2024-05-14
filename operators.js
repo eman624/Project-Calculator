@@ -46,6 +46,7 @@ let decimalCount = 0;
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
     if (number.textContent === ".") {
+      displayValue = 0;
       decimalCount++;
     }
 
@@ -59,4 +60,5 @@ numbers.forEach((number) => {
 clear.addEventListener("click", () => {
   display.textContent = "0";
   displayValue = "";
+  decimalCount = 0;
 });
