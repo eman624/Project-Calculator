@@ -2,7 +2,12 @@ const display = document.querySelector(".display");
 const numbers = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const clear = document.querySelector(".clear");
-// const add = document.querySelector(".add");
+
+let firstNumber = 0;
+let secondNumber = 0;
+let displayValue = "";
+let result = "";
+let decimalCount = 0;
 
 function add(x, y) {
   return x + y;
@@ -36,12 +41,6 @@ function operator(operator, x, y) {
       break;
   }
 }
-
-let firstNumber = 0;
-let secondNumber = 0;
-let displayValue = "";
-let result = "";
-let decimalCount = 0;
 
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
