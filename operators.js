@@ -35,47 +35,6 @@ function operate(operator, x, y) {
   }
 }
 
-// numbers.forEach((number) => {
-//   number.addEventListener("click", () => {
-//     if (number.textContent === "." && decimalCount > 0) {
-//       displayValue = 0;
-//       decimalCount++;
-//     }
-
-//     if (decimalCount <= 1 || number.textContent != ".") {
-// 		display.textContent = displayValue + number.textContent;
-// 		displayValue = display.textContent;
-//     }
-
-//     firstNumber = displayValue;
-//     console.log(`first number: ${firstNumber}`);
-//   });
-// });
-
-// operators.forEach((operator) => {
-//   operator.addEventListener("click", () => {
-//     operate(operator.textContent, firstNumber, 2);
-//   });
-// });
-
-// clear.addEventListener("click", () => {
-//   display.textContent = "0";
-//   displayValue = "";
-//   decimalCount = 0;
-// });
-
-// const display = document.querySelector(".display");
-// const numbers = document.querySelectorAll(".number");
-// const operators = document.querySelectorAll(".operator");
-// const clear = document.querySelector(".clear");
-
-// let firstNumber = 0;
-// let secondNumber = 0;
-
-// let displayValue = "";
-// let result = "";
-// let decimalCount = 0;
-
 let operator = "";
 let previousValue = "";
 let currentValue = "";
