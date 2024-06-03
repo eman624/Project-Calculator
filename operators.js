@@ -61,23 +61,31 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   );
 
-  operators.forEach((operator) =>
-    operate.addEventListener("click", function (e) {
-      operate(e.target.textContent, firstNumber, lastNumber);
+  operators.forEach((op) =>
+    op.addEventListener("click", function (e) {
+      handleOperator(e.target.textContent);
+      previousScreen.textContent = previousValue + " " + operator;
+      currentScreen.textContent = currentValue;
     })
   );
 
   clear.addEventListener("click", () => {
-    display.textContent = 0;
-    displayValue = "";
+    previousValue = "";
+    currentValue = "";
+    operator = "";
+    previousScreen.textContent = currentValue;
+    currentScreen.textContent = currentValue;
   });
 });
 
 function handleNumber(num) {
-  //   displayValue += num;
   if (currentValue.length <= 10) {
     currentValue += num;
   }
 }
 
-function handleOperator(operator) {}
+function handleOperator(operator) {
+  operator = op;
+  previousValue = currentValue;
+  currentValue = "";
+}
